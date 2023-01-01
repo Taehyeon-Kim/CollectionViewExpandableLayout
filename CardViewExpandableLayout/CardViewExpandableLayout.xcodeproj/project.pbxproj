@@ -27,6 +27,8 @@
 		BD9D99FB2961A15000F43882 /* DynamicCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9D99FA2961A15000F43882 /* DynamicCollectionView.swift */; };
 		BD9D9A062961A9B800F43882 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9D9A052961A9B800F43882 /* SectionHeaderView.swift */; };
 		BD9D9A082961B20A00F43882 /* FixedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9D9A072961B20A00F43882 /* FixedCell.swift */; };
+		BD9D9A0A2961D0BA00F43882 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9D9A092961D0BA00F43882 /* BaseCollectionViewCell.swift */; };
+		BD9D9A0C2961D10400F43882 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9D9A0B2961D10400F43882 /* BaseTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		BD9D99FA2961A15000F43882 /* DynamicCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicCollectionView.swift; sourceTree = "<group>"; };
 		BD9D9A052961A9B800F43882 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		BD9D9A072961B20A00F43882 /* FixedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedCell.swift; sourceTree = "<group>"; };
+		BD9D9A092961D0BA00F43882 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		BD9D9A0B2961D10400F43882 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,8 @@
 		BD9D9A022961A7BE00F43882 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BD9D9A092961D0BA00F43882 /* BaseCollectionViewCell.swift */,
+				BD9D9A0B2961D10400F43882 /* BaseTableViewCell.swift */,
 				BD9D99EB29618FAD00F43882 /* BaseView.swift */,
 				BD9D99FA2961A15000F43882 /* DynamicCollectionView.swift */,
 				BD9D99DE29618F5F00F43882 /* ExpandableView.swift */,
@@ -258,11 +264,13 @@
 				BD9D99F52961932200F43882 /* ReviewCollectionViewCell.swift in Sources */,
 				BD9D99EC29618FAD00F43882 /* BaseView.swift in Sources */,
 				BD9D99FB2961A15000F43882 /* DynamicCollectionView.swift in Sources */,
+				BD9D9A0A2961D0BA00F43882 /* BaseCollectionViewCell.swift in Sources */,
 				BD9D9A082961B20A00F43882 /* FixedCell.swift in Sources */,
 				BD9D9A062961A9B800F43882 /* SectionHeaderView.swift in Sources */,
 				BD9D99DF29618F5F00F43882 /* ExpandableView.swift in Sources */,
 				BD9D99CD29618EAA00F43882 /* SceneDelegate.swift in Sources */,
 				BD9D99F12961931500F43882 /* ReputationCollectionViewCell.swift in Sources */,
+				BD9D9A0C2961D10400F43882 /* BaseTableViewCell.swift in Sources */,
 				BD9D99F929619FEF00F43882 /* ExpandableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
