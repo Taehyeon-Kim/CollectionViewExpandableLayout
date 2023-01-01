@@ -26,6 +26,7 @@
 		BD9D99F929619FEF00F43882 /* ExpandableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9D99F829619FEF00F43882 /* ExpandableCell.swift */; };
 		BD9D99FB2961A15000F43882 /* DynamicCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9D99FA2961A15000F43882 /* DynamicCollectionView.swift */; };
 		BD9D9A062961A9B800F43882 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9D9A052961A9B800F43882 /* SectionHeaderView.swift */; };
+		BD9D9A082961B20A00F43882 /* FixedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9D9A072961B20A00F43882 /* FixedCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		BD9D99F829619FEF00F43882 /* ExpandableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableCell.swift; sourceTree = "<group>"; };
 		BD9D99FA2961A15000F43882 /* DynamicCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicCollectionView.swift; sourceTree = "<group>"; };
 		BD9D9A052961A9B800F43882 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		BD9D9A072961B20A00F43882 /* FixedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				BD9D99F829619FEF00F43882 /* ExpandableCell.swift */,
+				BD9D9A072961B20A00F43882 /* FixedCell.swift */,
 				BD9D99F02961931500F43882 /* ReputationCollectionViewCell.swift */,
 				BD9D99F42961932200F43882 /* ReviewCollectionViewCell.swift */,
 				BD9D99F22961931D00F43882 /* StudyCollectionViewCell.swift */,
@@ -255,6 +258,7 @@
 				BD9D99F52961932200F43882 /* ReviewCollectionViewCell.swift in Sources */,
 				BD9D99EC29618FAD00F43882 /* BaseView.swift in Sources */,
 				BD9D99FB2961A15000F43882 /* DynamicCollectionView.swift in Sources */,
+				BD9D9A082961B20A00F43882 /* FixedCell.swift in Sources */,
 				BD9D9A062961A9B800F43882 /* SectionHeaderView.swift in Sources */,
 				BD9D99DF29618F5F00F43882 /* ExpandableView.swift in Sources */,
 				BD9D99CD29618EAA00F43882 /* SceneDelegate.swift in Sources */,
