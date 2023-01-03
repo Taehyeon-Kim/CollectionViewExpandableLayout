@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BD2B152429641DAC004C9959 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B152329641DAC004C9959 /* UICollectionView+Extension.swift */; };
 		BD2B152629642A3B004C9959 /* RestaurantDetailSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B152529642A3B004C9959 /* RestaurantDetailSection.swift */; };
+		BD79D89029648185009478BE /* ExpandableDiffableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD79D88F29648185009478BE /* ExpandableDiffableDataSource.swift */; };
 		BD9D99CB29618EAA00F43882 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9D99CA29618EAA00F43882 /* AppDelegate.swift */; };
 		BD9D99D429618EAC00F43882 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD9D99D329618EAC00F43882 /* Assets.xcassets */; };
 		BD9D99D729618EAC00F43882 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD9D99D529618EAC00F43882 /* LaunchScreen.storyboard */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		BD2B152329641DAC004C9959 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		BD2B152529642A3B004C9959 /* RestaurantDetailSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailSection.swift; sourceTree = "<group>"; };
+		BD79D88F29648185009478BE /* ExpandableDiffableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableDiffableDataSource.swift; sourceTree = "<group>"; };
 		BD9D99C729618EAA00F43882 /* CardViewExpandableLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardViewExpandableLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9D99CA29618EAA00F43882 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD9D99D329618EAC00F43882 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,6 +75,14 @@
 				BD2B152329641DAC004C9959 /* UICollectionView+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BD79D88E29648170009478BE /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				BD79D88F29648185009478BE /* ExpandableDiffableDataSource.swift */,
+			);
+			path = DataSources;
 			sourceTree = "<group>";
 		};
 		BD9D99BE29618EAA00F43882 = {
@@ -149,6 +159,7 @@
 		BD9D9A002961A7A700F43882 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				BD79D88E29648170009478BE /* DataSources */,
 				BD2B152229641D9E004C9959 /* Extensions */,
 				BD2B152129641C7E004C9959 /* Base */,
 				BD9D99EF2961930A00F43882 /* Cell */,
@@ -267,6 +278,7 @@
 				BD9D9A0A2961D0BA00F43882 /* BaseCollectionViewCell.swift in Sources */,
 				BD9D9A062961A9B800F43882 /* SectionHeaderView.swift in Sources */,
 				BD9D99F12961931500F43882 /* ReputationCollectionViewCell.swift in Sources */,
+				BD79D89029648185009478BE /* ExpandableDiffableDataSource.swift in Sources */,
 				BD9D99F929619FEF00F43882 /* ExpandableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
