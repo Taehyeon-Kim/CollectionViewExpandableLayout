@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD2B152429641DAC004C9959 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B152329641DAC004C9959 /* UICollectionView+Extension.swift */; };
 		BD9D99CB29618EAA00F43882 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9D99CA29618EAA00F43882 /* AppDelegate.swift */; };
 		BD9D99D429618EAC00F43882 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD9D99D329618EAC00F43882 /* Assets.xcassets */; };
 		BD9D99D729618EAC00F43882 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD9D99D529618EAC00F43882 /* LaunchScreen.storyboard */; };
@@ -19,13 +20,13 @@
 		BD9D99F32961931D00F43882 /* StudyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9D99F22961931D00F43882 /* StudyCollectionViewCell.swift */; };
 		BD9D99F52961932200F43882 /* ReviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9D99F42961932200F43882 /* ReviewCollectionViewCell.swift */; };
 		BD9D99F929619FEF00F43882 /* ExpandableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9D99F829619FEF00F43882 /* ExpandableCell.swift */; };
-		BD9D99FB2961A15000F43882 /* DynamicCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9D99FA2961A15000F43882 /* DynamicCollectionView.swift */; };
 		BD9D9A062961A9B800F43882 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9D9A052961A9B800F43882 /* SectionHeaderView.swift */; };
 		BD9D9A0A2961D0BA00F43882 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9D9A092961D0BA00F43882 /* BaseCollectionViewCell.swift */; };
 		BD9D9A212964155B00F43882 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9D9A202964155B00F43882 /* ExampleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD2B152329641DAC004C9959 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		BD9D99C729618EAA00F43882 /* CardViewExpandableLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardViewExpandableLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9D99CA29618EAA00F43882 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD9D99D329618EAC00F43882 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,7 +37,6 @@
 		BD9D99F22961931D00F43882 /* StudyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD9D99F42961932200F43882 /* ReviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD9D99F829619FEF00F43882 /* ExpandableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableCell.swift; sourceTree = "<group>"; };
-		BD9D99FA2961A15000F43882 /* DynamicCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicCollectionView.swift; sourceTree = "<group>"; };
 		BD9D9A052961A9B800F43882 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		BD9D9A092961D0BA00F43882 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD9D9A202964155B00F43882 /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +63,14 @@
 				BD9D9A092961D0BA00F43882 /* BaseCollectionViewCell.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		BD2B152229641D9E004C9959 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BD2B152329641DAC004C9959 /* UICollectionView+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		BD9D99BE29618EAA00F43882 = {
@@ -139,6 +147,7 @@
 		BD9D9A002961A7A700F43882 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				BD2B152229641D9E004C9959 /* Extensions */,
 				BD2B152129641C7E004C9959 /* Base */,
 				BD9D99EF2961930A00F43882 /* Cell */,
 				BD9D9A012961A7B800F43882 /* Section */,
@@ -159,7 +168,6 @@
 			isa = PBXGroup;
 			children = (
 				BD9D9A202964155B00F43882 /* ExampleViewController.swift */,
-				BD9D99FA2961A15000F43882 /* DynamicCollectionView.swift */,
 				BD9D9A052961A9B800F43882 /* SectionHeaderView.swift */,
 			);
 			path = Views;
@@ -247,11 +255,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD9D99CB29618EAA00F43882 /* AppDelegate.swift in Sources */,
+				BD2B152429641DAC004C9959 /* UICollectionView+Extension.swift in Sources */,
 				BD9D99EE296190DE00F43882 /* ExpandableViewSection.swift in Sources */,
 				BD9D99F32961931D00F43882 /* StudyCollectionViewCell.swift in Sources */,
 				BD9D9A212964155B00F43882 /* ExampleViewController.swift in Sources */,
 				BD9D99F52961932200F43882 /* ReviewCollectionViewCell.swift in Sources */,
-				BD9D99FB2961A15000F43882 /* DynamicCollectionView.swift in Sources */,
 				BD9D9A0A2961D0BA00F43882 /* BaseCollectionViewCell.swift in Sources */,
 				BD9D9A062961A9B800F43882 /* SectionHeaderView.swift in Sources */,
 				BD9D99F12961931500F43882 /* ReputationCollectionViewCell.swift in Sources */,

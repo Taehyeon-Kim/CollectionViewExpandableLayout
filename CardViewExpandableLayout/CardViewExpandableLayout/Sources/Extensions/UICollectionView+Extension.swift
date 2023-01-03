@@ -1,21 +1,21 @@
 //
-//  DynamicCollectionView.swift
+//  UICollectionView+Extension.swift
 //  CardViewExpandableLayout
 //
-//  Created by taekki on 2023/01/01.
+//  Created by taekki on 2023/01/03.
 //
 
 import UIKit
 
-class DynamicHeightCollectionView: UICollectionView {
-  override func layoutSubviews() {
+extension UICollectionView {
+  open override func layoutSubviews() {
     super.layoutSubviews()
     if !__CGSizeEqualToSize(bounds.size, self.intrinsicContentSize) {
       self.invalidateIntrinsicContentSize()
     }
   }
   
-  override var intrinsicContentSize: CGSize {
+  open override var intrinsicContentSize: CGSize {
     return contentSize
   }
 }

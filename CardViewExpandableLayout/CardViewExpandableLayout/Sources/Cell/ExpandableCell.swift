@@ -35,7 +35,7 @@ final class ExpandableCell: BaseCollectionViewCell {
   }()
 
   private let collectionView: UICollectionView = {
-    lazy var collectionView = DynamicHeightCollectionView(frame: .zero, collectionViewLayout: createLayout())
+    lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
     return collectionView
   }()
   
