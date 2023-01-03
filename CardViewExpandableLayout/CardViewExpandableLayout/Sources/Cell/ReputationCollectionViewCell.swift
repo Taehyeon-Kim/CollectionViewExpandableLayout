@@ -24,13 +24,16 @@ final class ReputationCollectionViewCell: UICollectionViewCell {
   }
   
   private func setStyle() {
-    titleLabel.text = "평판"
+    clipsToBounds = true
+    layer.cornerRadius = 8
+    contentView.backgroundColor = .darkGray
+    titleLabel.textAlignment = .center
   }
   
   private func setLayout() {
     contentView.addSubview(titleLabel)
     titleLabel.snp.makeConstraints {
-      $0.top.leading.equalToSuperview().inset(5)
+      $0.edges.equalToSuperview().inset(5)
     }
   }
 }

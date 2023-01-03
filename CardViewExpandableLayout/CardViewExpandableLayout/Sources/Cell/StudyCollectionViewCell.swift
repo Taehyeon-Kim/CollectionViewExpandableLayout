@@ -24,7 +24,10 @@ final class StudyCollectionViewCell: UICollectionViewCell {
   }
   
   private func setStyle() {
-    titleLabel.text = "TITLE"
+    clipsToBounds = true
+    layer.cornerRadius = 8
+    contentView.backgroundColor = .darkGray
+    titleLabel.textAlignment = .center
   }
   
   private func setLayout() {

@@ -15,7 +15,7 @@ final class SectionHeaderView: UICollectionReusableView {
   override init(frame: CGRect) {
     super.init(frame: frame)
     
-    titleLabel.text = "섹션헤더"
+    titleLabel.text = "INNER SECTION TITLE"
     titleLabel.font = .systemFont(ofSize: 16, weight: .medium)
     
     addSubview(titleLabel)

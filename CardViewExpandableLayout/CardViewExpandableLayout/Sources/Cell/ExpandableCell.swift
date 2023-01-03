@@ -90,8 +90,6 @@ final class ExpandableCell: BaseCollectionViewCell {
     backgroundColor = .systemGray6
     clipsToBounds = true
     layer.cornerRadius = cornerRadius
-    
-    contentView.addSubview(rootStack)
 
     setUpConstraints()
     updateAppearance()
@@ -111,6 +109,10 @@ final class ExpandableCell: BaseCollectionViewCell {
       $0.top.directionalHorizontalEdges.equalToSuperview().inset(padding)
     }
     
+    disclosureIndicator.snp.makeConstraints {
+      $0.top.trailing.equalToSuperview().inset(padding)
+    }
+    
     // ContentSize가 잡히도록 최초에 최소 영역 설정
     collectionView.snp.makeConstraints {
       $0.height.equalTo(collectionViewHeight)
@@ -127,7 +129,7 @@ final class ExpandableCell: BaseCollectionViewCell {
   
   private func updateContent() {
     guard let _ = item else { return }
-    nameLabel.text = "HEAD TITLE"
+    nameLabel.text = "OUTER TITLE"
   }
   
   /// Updates the views to reflect changes in selection
@@ -156,10 +158,12 @@ final class ExpandableCell: BaseCollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReputationCollectionViewCell.identifier, for: indexPath) as! ReputationCollectionViewCell
         cell.configure(item[indexPath.row])
         return cell
+        
       case .study(let item):
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StudyCollectionViewCell.identifier, for: indexPath) as! StudyCollectionViewCell
         cell.configure(item[indexPath.row])
         return cell
+        
       case .review(let item):
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReviewCollectionViewCell.identifier, for: indexPath) as! ReviewCollectionViewCell
         cell.configure(item[indexPath.row])
@@ -170,7 +174,7 @@ final class ExpandableCell: BaseCollectionViewCell {
       return header
     }
   }
-  
+
   private func setUpBinding() {
     sections.accept(CardElement.dummy)
     sections
@@ -184,10 +188,16 @@ final class ExpandableCell: BaseCollectionViewCell {
 extension ExpandableCell {
   
   private static func createLayout() -> UICollectionViewLayout {
-    let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(37))
+    let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1/2), heightDimension: .estimated(37))
     let item = NSCollectionLayoutItem(layoutSize: itemSize)
-    let group = NSCollectionLayoutGroup.horizontal(layoutSize: itemSize, subitems: [item])
+    
+    let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(37))
+    let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 2)
+    group.interItemSpacing = .fixed(5)
+    
     let section = NSCollectionLayoutSection(group: group)
+    section.interGroupSpacing = 5
+    section.contentInsets = .init(top: 5, leading: 5, bottom: 5, trailing: 5)
     section.boundarySupplementaryItems = [Self.createHeaderLayout()]
     return UICollectionViewCompositionalLayout(section: section)
   }
