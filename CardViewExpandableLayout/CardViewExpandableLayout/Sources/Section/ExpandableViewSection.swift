@@ -38,7 +38,7 @@ extension CardElement {
   ]
 }
 
-enum ExpandableViewSection {
+enum ExpandableViewSection: Hashable {
   case reputation([Item])
   case study([Item])
   case review([Item])
@@ -69,7 +69,7 @@ extension ExpandableViewSection: SectionModelType {
 }
 
 extension ExpandableViewSection {
-  struct Item {
+  struct Item: Hashable {
     let content: String
   }
 }

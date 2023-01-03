@@ -9,16 +9,23 @@ import UIKit
 
 import RxSwift
 
-final class BaseCollectionViewCell: UICollectionViewCell {
+class BaseCollectionViewCell: UICollectionViewCell {
   
   var disposeBag = DisposeBag()
   
   override init(frame: CGRect) {
     super.init(frame: frame)
+    
+    setStyle()
+    setLayout()
   }
   
   @available(*, unavailable)
   required init?(coder: NSCoder) {
     fatalError()
   }
+  
+  func setStyle() {}
+  func setLayout() {}
+  func bind() {}
 }
