@@ -11,7 +11,7 @@ final class ExpandableDiffableDataSource: UICollectionViewDiffableDataSource<Int
   init(collectionView: UICollectionView) {
     super.init(collectionView: collectionView) { collectionView, indexPath, item -> UICollectionViewCell? in
       guard let cell = collectionView.dequeueReusableCell(
-        withReuseIdentifier: ExpandableCell.identifier,
+        withReuseIdentifier: String(describing: ExpandableCell.self),
         for: indexPath) as? ExpandableCell else {
           fatalError("Could not cast cell as \(ExpandableCell.self)")
         }

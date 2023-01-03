@@ -15,7 +15,7 @@ final class ExampleViewController: UIViewController {
 
   // Private Properties
   private let dummy: [ExpandableViewSection] = CardElement.dummy
-  private var dataSource: UICollectionViewDiffableDataSource<Int, ExpandableViewSection>?
+  private var dataSource: ExpandableDiffableDataSource?
 
   // UI
   private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
@@ -59,16 +59,7 @@ extension ExampleViewController {
   }
   
   private func setDataSource() {
-    dataSource = UICollectionViewDiffableDataSource<Int, ExpandableViewSection>(collectionView: collectionView) {
-      (collectionView, indexPath, item) -> UICollectionViewCell? in
-      guard let cell = collectionView.dequeueReusableCell(
-        withReuseIdentifier: String(describing: ExpandableCell.self),
-        for: indexPath) as? ExpandableCell else {
-        fatalError("Could not cast cell as \(ExpandableCell.self)")
-      }
-      cell.item = item
-      return cell
-    }
+    dataSource = ExpandableDiffableDataSource(collectionView: collectionView)
     collectionView.dataSource = dataSource
     
     var snapshot = NSDiffableDataSourceSnapshot<Int, ExpandableViewSection>()
