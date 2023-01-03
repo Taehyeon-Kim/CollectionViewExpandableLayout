@@ -14,20 +14,17 @@ import SnapKit
 
 final class ExpandableCell: BaseCollectionViewCell {
 
-  enum Section {
-    case main
-  }
-
+  // Properties
   var item: ExpandableViewSection? { didSet { updateContent() } }
   override var isSelected: Bool { didSet { updateAppearance() } }
+
+  private let dataSource: RxCollectionViewSectionedReloadDataSource<ExpandableViewSection>!
+  private var sections = BehaviorRelay<[ExpandableViewSection]>(value: [])
   
-  let dataSource: RxCollectionViewSectionedReloadDataSource<ExpandableViewSection>!
-  var sections = BehaviorRelay<[ExpandableViewSection]>(value: [])
-  
-  // MARK: Identifier
+  // Identifier
   static let identifier = NSStringFromClass(ExpandableCell.self)
 
-  // MARK: UI
+  // UI
   private let nameLabel: UILabel = {
     let nameLabel = UILabel()
     nameLabel.font = .preferredFont(forTextStyle: .headline)
@@ -91,13 +88,13 @@ final class ExpandableCell: BaseCollectionViewCell {
     clipsToBounds = true
     layer.cornerRadius = cornerRadius
 
-    setUpConstraints()
+    setConstraints()
     updateAppearance()
-    setUpCollectionView()
-    setUpBinding()
+    setCollectionView()
+    setBinding()
   }
  
-  private func setUpConstraints() {
+  private func setConstraints() {
     contentView.addSubview(rootStack)
     contentView.addSubview(disclosureIndicator)
     
@@ -131,20 +128,18 @@ final class ExpandableCell: BaseCollectionViewCell {
     guard let _ = item else { return }
     nameLabel.text = "OUTER TITLE"
   }
-  
-  /// Updates the views to reflect changes in selection
+
   private func updateAppearance() {
     closedConstraint?.isActive = !isSelected
     openConstraint?.isActive = isSelected
     
-    UIView.animate(withDuration: 0.3) { // 0.3 seconds matches collection view animation
-      // Set the rotation just under 180º so that it rotates back the same way
+    UIView.animate(withDuration: 0.3) {
       let upsideDown = CGAffineTransform(rotationAngle: .pi * 0.999 )
       self.disclosureIndicator.transform = self.isSelected ? upsideDown :.identity
     }
   }
   
-  private func setUpCollectionView() {
+  private func setCollectionView() {
     collectionView.register(SectionHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeaderView.identifier)
     collectionView.register(ReputationCollectionViewCell.self, forCellWithReuseIdentifier: ReputationCollectionViewCell.identifier)
     collectionView.register(StudyCollectionViewCell.self, forCellWithReuseIdentifier: StudyCollectionViewCell.identifier)
@@ -175,7 +170,7 @@ final class ExpandableCell: BaseCollectionViewCell {
     }
   }
 
-  private func setUpBinding() {
+  private func setBinding() {
     sections.accept(CardElement.dummy)
     sections
       .bind(to: collectionView.rx.items(dataSource: dataSource))
